@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMANAWA Digital Library</title>
+
+<meta name="description" content="Perpustakaan digital SMANAWA untuk buku pelajaran Kurikulum Merdeka dan koleksi edukatif modern.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ===================================================== -->
+<!-- ================= NAVBAR STICKY ===================== -->
+<!-- ===================================================== -->
+<header class="main-header">
+
+<nav class="navbar">
+
+<div class="brand">
+<img src="assets/logo.jpg" class="logo-img" alt="Logo SMANAWA">
+
+<div class="brand-text">
+<span class="title">SMANAWA DIGITAL LIBRARY</span>
+<span class="tagline">Membawa SMANAWA menjadi Juara</span>
+</div>
+</div>
+
+<div class="nav-actions">
+<button id="darkToggle">🌙 Dark Mode</button>
+</div>
+
+</nav>
+
+</header>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= HERO (NOT STICKY) ================= -->
+<!-- ===================================================== -->
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>SMANAWA DIGITAL LIBRARY</h1>
+<p>Perpustakaan Digital Modern untuk Pembelajaran Masa Depan 🔥</p>
+
+<div class="search-area">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Cari judul buku, mapel, atau kategori..."
+autocomplete="off"
+>
+
+<select id="filterSelect">
+<option value="all">Semua Buku</option>
+<option value="x">Kelas X</option>
+<option value="xi">Kelas XI</option>
+<option value="xii">Kelas XII</option>
+<option value="other">Koleksi Lainnya</option>
+</select>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= MAIN CONTENT ====================== -->
+<!-- ===================================================== -->
+<main class="library-container">
+
+
+
+<!-- ================= RAK KELAS X ================= -->
+<section class="rack rack-x" id="section-x">
+
+<div class="rack-header">
+<h2>Kelas X</h2>
+<span class="rack-count" id="count-x">0 Buku</span>
+</div>
+
+<div class="book-grid" id="rack-x"></div>
+
+</section>
+
+
+
+<!-- ================= RAK KELAS XI ================= -->
+<section class="rack rack-xi" id="section-xi">
+
+<div class="rack-header">
+<h2>Kelas XI</h2>
+<span class="rack-count" id="count-xi">0 Buku</span>
+</div>
+
+<div class="book-grid" id="rack-xi"></div>
+
+</section>
+
+
+
+<!-- ================= RAK KELAS XII ================= -->
+<section class="rack rack-xii" id="section-xii">
+
+<div class="rack-header">
+<h2>Kelas XII</h2>
+<span class="rack-count" id="count-xii">0 Buku</span>
+</div>
+
+<div class="book-grid" id="rack-xii"></div>
+
+</section>
+
+
+
+<!-- ================= KOLEKSI LAINNYA ================= -->
+<section class="rack rack-other" id="section-other">
+
+<div class="rack-header">
+<h2>Koleksi Lainnya</h2>
+<span class="rack-count" id="count-other">0 Buku</span>
+</div>
+
+<div class="book-grid" id="rack-other"></div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= FOOTER ============================ -->
+<!-- ===================================================== -->
+<footer class="main-footer">
+
+<div class="footer-container">
+
+<div class="footer-about">
+<h3>Tentang Website</h3>
+<p>
+SMANAWA Digital Library adalah platform perpustakaan digital yang menyediakan
+buku pelajaran Kurikulum Merdeka, literatur edukatif, dan koleksi bacaan
+modern untuk mendukung pembelajaran berbasis teknologi.
+</p>
+</div>
+
+<div class="footer-contact">
+<h3>Kontak Perpustakaan</h3>
+<p>Email : perpustakaan@smanawa.sch.id</p>
+<p>Telepon : 0812-0000-0000</p>
+<p>Alamat : Perpustakaan SMANAWA</p>
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 SMANAWA Digital Library — All Rights Reserved
+</p>
+
+</footer>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= PDF VIEWER PRO ==================== -->
+<!-- ===================================================== -->
+<div id="pdfModal" class="pdf-modal">
+
+<div class="pdf-container">
+
+<div class="pdf-header">
+<div class="pdf-controls">
+<button onclick="toggleFullscreen()">Fullscreen</button>
+<button onclick="closePDF()">Tutup</button>
+</div>
+</div>
+
+<div id="loadingSpinner">Memuat buku...</div>
+
+<iframe id="pdfFrame" title="PDF Viewer"></iframe>
+
+</div>
+
+</div>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= SCROLL TO TOP ===================== -->
+<!-- ===================================================== -->
+<button id="scrollTopBtn" aria-label="Scroll ke atas">
+↑
+</button>
+
+
+
+<!-- ===================================================== -->
+<!-- ================= SCRIPT ============================ -->
+<!-- ===================================================== -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
